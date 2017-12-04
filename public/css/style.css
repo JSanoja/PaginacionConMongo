@@ -1,0 +1,25 @@
+body {
+  padding: 0px;
+  margin:0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.main {
+  display: none;
+}
+
+header {
+    background: black;
+    height: 60px;
+}
+
+.logo img {
+    height: 40px;
+    margin: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}

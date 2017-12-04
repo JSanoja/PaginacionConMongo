@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es" ng-app="dosalcubo">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/js/jquery.js" ></script>
+    <script src="/js/angular.js" ></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+  </head>
+  <body ng-controller="main">
+    <header>
+      <div class="logo"><img src="img/logo.jpg"/></div>
+    </header>
+    <main class="main" role="main" class="col-sm-12 ml-sm-auto col-md-12 pt-3">
+          <h2>Usuarios</h2>
+          <p>Mostrando {{limite}} de {{longitud}} usuarios.
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th>Domicilio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="usuario in usuarios">
+                  <td>{{usuario.nombre}}</td>
+                  <td>{{usuario.apellido}}</td>
+                  <td>{{usuario.domicilio}}</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+          <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#" ng-click="anterior()">Previous</a></li>
+              <li class="page-item" ng-repeat="pag in paginas"><a class="page-link" href="#" ng-click="irPag(pag)">{{$index + 1}}</a></li>
+              <li class="page-item"><a class="page-link" href="#" ng-click="siguiente()">Next</a></li>
+            </ul>
+          </nav>
+        </main>
+
+    <script src="js/dosalcubo.js"></script>
+  </body>
+</html>
